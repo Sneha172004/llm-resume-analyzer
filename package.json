@@ -1,0 +1,10 @@
+{
+  "name": "llm-resume-analyzer",
+  "version": "1.0.0",
+  "description": "LLM-powered resume analyzer",
+  "main": "app.js",
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}
