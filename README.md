@@ -1,9 +1,31 @@
 # LLM Resume Analyzer
 
-A simple Node.js experiment that analyzes resumes and suggests improvements.
+A simple AI-inspired tool that analyzes resume text and provides improvement suggestions using rule-based analysis.
 
-Tech Stack
+## Features
+- Analyzes resume content
+- Suggests improvements for better job applications
+- Highlights missing achievements and project links
+
+## Tech Stack
+- JavaScript
 - Node.js
 
-What it does
-Takes a resume as input and generates suggestions to improve it.
+## How it Works
+The script takes resume text as input and prints suggestions to improve clarity, measurable achievements, and technical highlights.
+
+## Run the Project
+
+1. Clone the repository
+2. Run the script
+
+node app.js
+
+## Example Output
+
+Analyzing resume...
+
+Suggestions:
+- Add measurable achievements
+- Include GitHub project links
+- Highlight backend technologies used
