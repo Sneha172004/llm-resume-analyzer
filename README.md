@@ -1,31 +1,27 @@
 # LLM Resume Analyzer
 
-A simple AI-inspired tool that analyzes resume text and provides improvement suggestions using rule-based analysis.
+An LLM-powered CLI tool that analyzes resumes and generates improvement suggestions using OpenAI models.
 
 ## Features
-- Analyzes resume content
-- Suggests improvements for better job applications
-- Highlights missing achievements and project links
+- Resume evaluation using LLMs
+- Prompt-based analysis
+- CLI input for resume text
 
 ## Tech Stack
-- JavaScript
 - Node.js
+- OpenAI API
+- Prompt Engineering
 
-## How it Works
-The script takes resume text as input and prints suggestions to improve clarity, measurable achievements, and technical highlights.
+## How to Run
 
-## Run the Project
+1. Install dependencies
 
-1. Clone the repository
-2. Run the script
+npm install
+
+2. Set API key
+
+export OPENAI_API_KEY=your_key
+
+3. Run
 
 node app.js
-
-## Example Output
-
-Analyzing resume...
-
-Suggestions:
-- Add measurable achievements
-- Include GitHub project links
-- Highlight backend technologies used
