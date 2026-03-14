@@ -1,18 +1,23 @@
-console.log("LLM Resume Analyzer Project");
+const readline = require("readline");
 
-const resume = `
-Computer Engineering student skilled in React, Node.js and backend APIs.
-Built a task management system and event registration platform.
-`;
+console.log("LLM Resume Analyzer");
 
-function analyzeResume(text) {
-    console.log("\nAnalyzing resume...\n");
-    console.log(text);
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-    console.log("\nSuggestions:");
-    console.log("- Add measurable achievements");
-    console.log("- Include GitHub project links");
-    console.log("- Highlight backend technologies used");
-}
+rl.question("Paste your resume:\n", function(resume) {
 
-analyzeResume(resume);
+  console.log("\nAnalyzing resume...\n");
+
+  console.log("Resume:");
+  console.log(resume);
+
+  console.log("\nSuggestions:");
+  console.log("- Add measurable achievements");
+  console.log("- Mention backend technologies used");
+  console.log("- Include GitHub project links");
+
+  rl.close();
+});
