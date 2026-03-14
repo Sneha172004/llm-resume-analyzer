@@ -1,23 +1,34 @@
-const readline = require("readline");
+import OpenAI from "openai";
+import readline from "readline";
 
-console.log("LLM Resume Analyzer");
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-rl.question("Paste your resume:\n", function(resume) {
+rl.question("Paste your resume:\n", async (resume) => {
 
-  console.log("\nAnalyzing resume...\n");
+  console.log("\nAnalyzing resume using LLM...\n");
 
-  console.log("Resume:");
-  console.log(resume);
+  const response = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content: "You are an expert recruiter analyzing resumes."
+      },
+      {
+        role: "user",
+        content: `Analyze this resume and give improvement suggestions:\n${resume}`
+      }
+    ]
+  });
 
-  console.log("\nSuggestions:");
-  console.log("- Add measurable achievements");
-  console.log("- Mention backend technologies used");
-  console.log("- Include GitHub project links");
+  console.log(response.choices[0].message.content);
 
   rl.close();
 });
